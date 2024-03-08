@@ -1,0 +1,34 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Data</title>
+</head>
+<body>
+    <h1>Company Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>Founder ID</th>
+                <th>Sector</th>
+                <th>Stock Unique ID</th>
+                <th>Dividend Yield</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for company in companies %}
+            <tr>
+                <td>{{ company['Company_Name'] }}</td>
+                <td>{{ company['Founder ID'] }}</td>
+                <td>{{ company['Sector'] }}</td>
+                <td>{{ company['Stock Unique ID'] }}</td>
+                <td>{{ company['Dividend Yield'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
